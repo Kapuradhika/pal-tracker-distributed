@@ -20,11 +20,11 @@ public class FlowTest {
     private final HttpClient httpClient = new HttpClient();
     private final String workingDir = System.getProperty("user.dir");
 
-    private ApplicationServer registrationServer = new ApplicationServer(workingDir + "/../applications/registration-server/build/libs/registration-server.jar", "8883");
+    //private ApplicationServer registrationServer = new ApplicationServer(workingDir + "/../applications/registration-server/build/libs/registration-server.jar", "8883");
     private ApplicationServer allocationsServer = new ApplicationServer(workingDir + "/../applications/allocations-server/build/libs/allocations-server.jar", "8881");
     private ApplicationServer backlogServer = new ApplicationServer(workingDir + "/../applications/backlog-server/build/libs/backlog-server.jar", "8882");
     private ApplicationServer timesheetsServer = new ApplicationServer(workingDir + "/../applications/timesheets-server/build/libs/timesheets-server.jar", "8884");
-    private ApplicationServer eurekaServer = new ApplicationServer(workingDir + "/../platform-services/eureka-server/build/libs/eureka-server.jar", "8761");
+    private ApplicationServer registrationServer = new ApplicationServer(workingDir + "/../platform-services/eureka-server/build/libs/eureka-server.jar", "8761");
 
     private String registrationServerUrl(String path) {
         return "http://localhost:8883" + path;
